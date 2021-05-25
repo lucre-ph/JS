@@ -43,15 +43,17 @@ crearElementosDOM();
 
 function instrucciones() {
 //CREACIÓN DE BOTÓN MOSTRAR CONTROLES Y EVENTO SHOW()
-    $('.instrucciones').append('<br><h4 id="instrucciones" style= display:none>Deberás encontrar a 10 personajes de la gran saga de Star Wars antes de que se acabe el tiempo. Para ello, haz click en las tarjetas para darlas vuelta y encontrar su respectivo par. <br>¡Que la Fuerza te acompañe!</h4><button id="mostrarInstrucciones">INSTRUCCIONES</button>')
+    $('.instrucciones').append('<br><h4 id="instrucciones" style= display:none>Deberás encontrar a 10 personajes de la gran saga de Star Wars en el menor tiempo posible. Para ello, haz click en las tarjetas para darlas vuelta y encontrar su respectivo par. <br>¡Que la Fuerza te acompañe!</h4><br><span style= display:none>TIP: puedes guiarte con la música para hacerlo cada vez mejor</span><button id="mostrarInstrucciones">INSTRUCCIONES</button>')
     $('#mostrarInstrucciones').on('click', function() {
         $('#instrucciones').show();
+        $('span').show();
         $('#mostrarInstrucciones').hide();
 //CREACIÓN DE BOTÓN QUITAR CONTROLES Y EVENTO HIDE() CON JQUERY
         $('#instrucciones').prepend('<button id="ocultarInstrucciones">OCULTAR INSTRUCCIONES</button><br>')
 //EVENTO HIDE() CON JQUERY
     $('#ocultarInstrucciones').click (() => {
         $('#instrucciones, #ocultarInstrucciones').slideUp(3000);
+        $('span').slideUp(3000);
         $('#mostrarInstrucciones').show(3000);
         })        
     })
