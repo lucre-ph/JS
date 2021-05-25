@@ -1,0 +1,214 @@
+/*ESTILO GENERAL*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+footer {
+    grid-area: pie;
+    display: flex;
+    justify-content: center;
+    font-size: small;
+    font-style: italic;
+    background-color: black;
+    height: min-content;
+}
+
+
+/*ESTILOS 1ER HTML*/
+#logIn {
+    display: block;
+    padding-top: 3%;
+    grid-area: logIn;
+}
+
+#body1{
+    background-image: url(../img/fondo.jpg);
+    width: 100%;
+    height: 100vh;
+    color: rgb(230, 226, 42);
+    font-family: Verdana, sans-serif;
+    display: grid;
+    grid-template-columns: repeat(2, 6fr) ;
+    grid-template-areas: "titulo titulo"
+                        "logIn logIn"
+                        "ingresar ingresar"
+                        "falsoBtn falsoBtn"
+                        "pie pie";
+}
+
+/*botones*/
+#ingresar, #ingresar:visited {
+    background: linear-gradient(to top left, #000000 0%, #7b7960 100%);
+    color: rgb(230, 226, 42);
+    border: 2px solid black;
+    font-size: 1rem;
+    padding: 2% 10%;
+    vertical-align: middle;
+    width: 100%;
+    display: inline-block;
+}
+
+#falsoBtn, #falsoBtn:visited {
+    background: linear-gradient(to top left, #494848 0%, #9e9c7b 100%);
+    color: rgb(228, 226, 118);
+    border: 2px solid rgb(47, 47, 47);
+    font-size: 1rem;
+    padding: 2% 10%;
+    vertical-align: middle;
+    grid-area: falsoBtn;
+}
+
+a:visited, a {
+    color: rgb(230, 226, 42);
+    text-decoration: none;
+}
+
+#ingresar:hover, #falsoBtn:hover {
+    cursor: pointer;
+    font-size: large;
+}
+
+#ingresar {
+    grid-area: ingresar;
+}
+
+#logIn, #ingresar, #falsoBtn {
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+    background-color: black;
+    text-align: center;
+}
+
+#noDisp {
+    display: none;
+    background-color: black;
+    text-align: center;
+}
+
+#container1 {
+    padding: 5px;
+    width: 350px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/*ESTILOS 2DO HTML*/
+img {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+}
+
+#score {
+    background-color: black;
+    height: min-content;
+    position: absolute;
+    right: 3%;
+    top: 10%;
+    width: max-content;
+    grid-area: score;
+}
+
+/*botones*/
+#start {
+    background: linear-gradient(to top left, #000000 0%, #c2b611 100%);
+    color: rgb(230, 226, 42);
+    width: 350px;
+    height: 80px;
+    border: 2px solid black;
+    font-size: 2rem;
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 3px;
+}
+
+#ocultarInstrucciones, #mostrarInstrucciones, #btnGet {
+    width: 9rem;
+    height: min-content;
+    border-color: rgb(226, 224, 82);
+    border-radius: 3px;
+    background-color: rgb(226, 224, 82);
+}
+
+/*grids*/
+#principal {
+    background-image: url(../img/fondo.jpg);
+    width: 100%;
+    height: 100vh;
+    color: rgb(230, 226, 42);
+    font-family: Verdana, sans-serif;
+    display: grid;
+    grid-template-columns: repeat(4, 3fr) ;
+    grid-template-areas: "saludo titulo titulo sonido"
+                        "instrucciones juego juego score"
+                        "instrucciones juego juego salida"
+                        "pie pie pie pie";
+}
+
+.instrucciones {
+    display: flex;
+    flex-wrap: wrap;
+    font-style: italic;
+    background-color: black;
+    height: min-content;
+    position: relative;
+    top: 0%;
+    grid-area: instrucciones;
+    margin-left: 10%;
+}
+
+#juego {
+    margin-left: 13%;
+    margin-right: 40%;
+    border: solid 5px rgb(47, 47, 47);
+    height: 410px;
+    width: 510px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    grid-area: juego;
+    background: center no-repeat url(../img/fondo2.jpg);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#saludo {
+    grid-area: saludo;
+    background-color: black;
+    height: min-content;
+    margin: 10% 10% 10% 10%;
+    width: fit-content;
+}
+
+#title {
+    grid-area: titulo;
+    margin: 10px;
+    padding-top: 15px;
+    width: fit-content;
+    background-color: black;
+    text-align: center;
+}
+
+#audio {
+    grid-area: sonido;
+}
+
+#salir {
+    position: absolute;
+    bottom: 5%;
+    right: 2%;
+    grid-area: salida;
+    background-color: black;
+    text-align: center;
+    padding-bottom: 1%;
+}
